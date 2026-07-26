@@ -180,6 +180,22 @@
 
     .urgency-bar svg { width: 28px; height: 28px; stroke: #F57F17; flex-shrink: 0; }
     .urgency-bar p { font-size: 0.9rem; color: #E65100; font-weight: 600; }
+    @media (max-width: 768px) {
+      .invest-hero { padding: 6rem 1rem 3rem; }
+      .plan-card { padding: 1.75rem 1.25rem; }
+      .space-card-header { padding: 1rem; }
+      .space-card-body { padding: 1rem; }
+      .urgency-bar { flex-direction: column; gap: 0.5rem; }
+      .how-step { gap: 1rem; }
+      .bank-card { padding: 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      .invest-hero h1 { font-size: 1.75rem; }
+      .roi-badge { font-size: 0.9rem; padding: 0.5rem 1rem; }
+      .plan-card .amount { font-size: 2rem; }
+      .plan-card .roi-rate { font-size: 2.2rem; }
+    }
   </style>
 </head>
 <body>

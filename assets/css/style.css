@@ -510,9 +510,60 @@ section {
     gap: 0.5rem;
     text-align: center;
   }
+
+  /* Tables scroll horizontally on small screens */
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .styled-table {
+    min-width: 520px;
+  }
+
+  /* Cards reduce padding */
+  .card { padding: 1.25rem; }
+
+  /* Plan cards stack */
+  .plan-card { padding: 1.75rem 1.25rem; }
+
+  /* Dividers hide on mobile */
+  .divider-line { display: none; }
+
+  /* Section padding tighter */
+  section { padding: 3.5rem 1rem; }
 }
 
 @media (max-width: 480px) {
-  section { padding: 3.5rem 1rem; }
+  section { padding: 2.5rem 1rem; }
+
   .navbar { padding: 0 1rem; }
+
+  .navbar-brand span { font-size: 0.9rem; }
+
+  .page-header { padding: 6rem 1rem 2.5rem; }
+
+  /* Prevent any element exceeding viewport */
+  * { max-width: 100%; }
+
+  img { height: auto; }
+
+  .btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.88rem;
+  }
+
+  /* Hero card full width */
+  .hero-card { padding: 1.25rem; }
+
+  /* Stats grid 2-col on tiny screens */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Section label smaller */
+  .section-label { font-size: 0.72rem; }
+
+  /* Footer tighter */
+  .footer { padding: 2.5rem 1rem 1.5rem; }
 }

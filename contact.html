@@ -97,6 +97,15 @@
     @media (max-width: 768px) {
       .contact-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
+      .contact-info-card { padding: 1.25rem; }
+      .form-card { padding: 1.25rem; }
+      .map-placeholder { padding: 1.25rem; }
+    }
+
+    @media (max-width: 480px) {
+      .contact-info-card { padding: 1rem; }
+      .form-card { padding: 1rem; }
+      .contact-item { gap: 0.75rem; }
     }
   </style>
 </head>
@@ -266,22 +275,22 @@
 </section>
 
 <!-- QUICK CONTACT BAND -->
-<section style="background:var(--green-pale);padding:3rem 2rem;">
+<section style="background:var(--green-pale);padding:3rem 1rem;">
   <div class="container">
     <div style="display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;align-items:center;text-align:center;">
       <div>
         <div style="font-size:0.8rem;font-weight:700;color:var(--green-dark);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.35rem;">Call Us Directly</div>
-        <a href="tel:09133329547" style="font-size:1.5rem;font-weight:800;color:var(--green-main);text-decoration:none;">09133329547</a>
+        <a href="tel:09133329547" style="font-size:1.3rem;font-weight:800;color:var(--green-main);text-decoration:none;">09133329547</a>
       </div>
-      <div style="width:1px;height:50px;background:#ccc;"></div>
+      <div class="divider-line" style="width:1px;height:50px;background:#ccc;"></div>
       <div>
         <div style="font-size:0.8rem;font-weight:700;color:var(--green-dark);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.35rem;">Email Us</div>
-        <a href="mailto:hidlimited2015@gmail.com" style="font-size:1.1rem;font-weight:700;color:var(--green-main);text-decoration:none;">hidlimited2015@gmail.com</a>
+        <a href="mailto:hidlimited2015@gmail.com" style="font-size:0.95rem;font-weight:700;color:var(--green-main);text-decoration:none;word-break:break-all;">hidlimited2015@gmail.com</a>
       </div>
-      <div style="width:1px;height:50px;background:#ccc;"></div>
+      <div class="divider-line" style="width:1px;height:50px;background:#ccc;"></div>
       <div>
         <div style="font-size:0.8rem;font-weight:700;color:var(--green-dark);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.35rem;">Investment Window</div>
-        <span style="font-size:1.1rem;font-weight:800;color:#E65100;">Open for 3 Months Only</span>
+        <span style="font-size:1rem;font-weight:800;color:#E65100;">Open for 3 Months Only</span>
       </div>
     </div>
   </div>

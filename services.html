@@ -92,6 +92,16 @@
       font-weight: 700;
       flex-shrink: 0;
     }
+    @media (max-width: 768px) {
+      .service-detail { padding: 1.5rem; }
+      .lifecycle-steps::before { left: 23px; }
+      .step-num { width: 46px; height: 46px; font-size: 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      .lifecycle-step { gap: 1rem; }
+      .service-detail h3 { font-size: 0.95rem; }
+    }
   </style>
 </head>
 <body>
