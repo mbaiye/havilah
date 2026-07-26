@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Havilah Image Developments Ltd — Building Excellence</title>
+  <meta name="description" content="Havilah Image Developments Ltd — Architect-led project management firm with 15+ years delivering residential, commercial and institutional projects in Nigeria." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, rgba(27,94,32,0.92) 0%, rgba(46,125,50,0.85) 50%, rgba(76,175,80,0.7) 100%),
+                  url('assets/images/hero-bg.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 6rem 2rem 4rem;
+      color: white;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(249,168,37,0.2);
+      border: 1px solid rgba(249,168,37,0.5);
+      color: #FFD54F;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.9rem;
+      border-radius: 50px;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 span {
+      color: #81C784;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: #c8e6c9;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 16px;
+      padding: 2rem;
+    }
+
+    .hero-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      color: white;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      padding-bottom: 0.75rem;
+    }
+
+    .invest-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .invest-row:last-child { border: none; }
+
+    .invest-row .label { color: #a5d6a7; font-size: 0.85rem; }
+    .invest-row .value { color: white; font-weight: 700; font-size: 0.95rem; }
+    .invest-row .roi { background: #F9A825; color: #1a1a1a; font-size: 0.75rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 50px; }
+
+    .hero-card .btn {
+      width: 100%;
+      text-align: center;
+      margin-top: 1.25rem;
+    }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: white;
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .trust-bar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #444;
+    }
+
+    .trust-item svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--green-main);
+    }
+
+    /* ── STATS ── */
+    .stats-section {
+      background: var(--green-main);
+      padding: 4rem 2rem;
+    }
+
+    .stats-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .stat-item .num {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: white;
+      line-height: 1;
+    }
+
+    .stat-item .lbl {
+      font-size: 0.85rem;
+      color: #c8e6c9;
+      margin-top: 0.4rem;
+    }
+
+    .stat-divider {
+      width: 1px;
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* ── SERVICES PREVIEW ── */
+    .service-card {
+      border-radius: 12px;
+      padding: 2rem;
+      background: white;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      border-top: 4px solid var(--green-main);
+      transition: transform 0.2s;
+    }
+
+    .service-card:hover { transform: translateY(-5px); }
+
+    .service-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: var(--dark);
+    }
+
+    .service-card p {
+      font-size: 0.88rem;
+      color: var(--gray-text);
+      line-height: 1.6;
+    }
+
+    /* ── PROJECT PREVIEW ── */
+    .project-thumb {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .project-thumb img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(27,94,32,0.9));
+      padding: 1rem;
+      color: white;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* ── CTA BAND ── */
+    .cta-band {
+      background: linear-gradient(135deg, var(--green-dark), var(--green-main));
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .cta-band h2 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .cta-band p {
+      color: #c8e6c9;
+      max-width: 540px;
+      margin: 0 auto 2rem;
+      font-size: 1rem;
+    }
+
+    .cta-band .btn-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ── REVEAL ANIMATION ── */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    [data-reveal].revealed {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat-divider { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand">
+    <div style="width:40px;height:40px;background:white;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+      <svg viewBox="0 0 40 40" width="32" height="32">
+        <circle cx="20" cy="20" r="18" fill="#2E7D32"/>
+        <text x="20" y="26" text-anchor="middle" fill="white" font-size="16" font-weight="800" font-family="Arial">H</text>
+      </svg>
+    </div>
+    <span>HAVILAH<small>Image Developments Ltd</small></span>
+  </a>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="investment.html">Invest</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="#FFD54F"><circle cx="6" cy="6" r="6"/></svg>
+        RC 1492175 · Incorporated Nigeria
+      </div>
+      <h1>Building <span>Excellence</span>, Delivering Real Estate Value</h1>
+      <p>Havilah Image Developments Ltd is an architect-led project management firm with 15+ years of delivering residential, commercial and institutional projects across Nigeria — on time, on budget.</p>
+      <div class="hero-actions">
+        <a href="investment.html" class="btn btn-gold">View Investment Plans</a>
+        <a href="projects.html" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,0.5);">Our Projects</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Current Investment Opportunity</h3>
+      <div class="invest-row">
+        <span class="label">Location</span>
+        <span class="value">Ijesha Rd, Surulere, Lagos</span>
+      </div>
+      <div class="invest-row">
+        <span class="label">Project Type</span>
+        <span class="value">Mixed-Use Building</span>
+      </div>
+      <div class="invest-row">
+        <span class="label">Units Available</span>
+        <span class="value">Warehouse · Office · Mini Flat</span>
+      </div>
+      <div class="invest-row">
+        <span class="label">Lease Term</span>
+        <span class="value">15 – 18 Years</span>
+      </div>
+      <div class="invest-row">
+        <span class="label">Return on Investment</span>
+        <span class="value"><span class="roi">18% per annum</span></span>
+      </div>
+      <div class="invest-row">
+        <span class="label">Investment Window</span>
+        <span class="value" style="color:#FFD54F;">3 Months Only</span>
+      </div>
+      <a href="investment.html" class="btn btn-gold">Invest Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRUST BAR ── -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      CAC Registered Company
+    </div>
+    <div class="trust-item">
+      <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+      15+ Years Experience
+    </div>
+    <div class="trust-item">
+      <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
+      Expert Multidisciplinary Team
+    </div>
+    <div class="trust-item">
+      <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+      200%+ Projected ROI
+    </div>
+    <div class="trust-item">
+      <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      Lagos · Port Harcourt · Nationwide
+    </div>
+  </div>
+</div>
+
+<!-- ── STATS ── -->
+<div class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="num" data-count="15" data-suffix="+">0</div>
+      <div class="lbl">Years of Experience</div>
+    </div>
+    <div class="stat-item">
+      <div class="num" data-count="10" data-suffix="+">0</div>
+      <div class="lbl">Completed Projects</div>
+    </div>
+    <div class="stat-item">
+      <div class="num" data-count="100" data-suffix="%">0</div>
+      <div class="lbl">Client Satisfaction</div>
+    </div>
+    <div class="stat-item">
+      <div class="num" data-count="18" data-suffix="%">0</div>
+      <div class="lbl">Annual ROI for Investors</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SERVICES PREVIEW ── -->
+<section style="background: var(--gray-light);">
+  <div class="container">
+    <div data-reveal>
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Full-Lifecycle <span>Project Management</span></h2>
+      <p class="section-subtitle">From concept to handover, we manage every phase with precision, accountability and innovation.</p>
+    </div>
+    <div class="grid-3" data-reveal>
+      <div class="service-card">
+        <div class="icon-circle">
+          <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+        </div>
+        <h3>Project Planning & Management</h3>
+        <p>PM plan, RACI, communication plan, master schedule, cost baseline and cash-flow tracking from day one.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon-circle">
+          <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+        </div>
+        <h3>Architecture & Design</h3>
+        <p>Design coordination, permits, approvals and structural planning led by certified architects with 15+ years of experience.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon-circle">
+          <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5"/></svg>
+        </div>
+        <h3>Construction Supervision</h3>
+        <p>Full site mobilization, HSE plan, QA/QC regime, progress meetings and defects management through to final handover.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon-circle">
+          <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3>Tender & Procurement</h3>
+        <p>Tender strategy, bid analysis, clarifications, negotiation and award to secure the best value for every project.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon-circle">
+          <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        </div>
+        <h3>Real Estate Investment</h3>
+        <p>Structured investment opportunities with transparent ROI projections, legal agreements and guaranteed returns.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon-circle">
+          <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        </div>
+        <h3>Interior & Landscape Design</h3>
+        <p>Wellness-centred interiors and landscape architecture that enhance user experience and property value.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;" data-reveal>
+      <a href="services.html" class="btn btn-primary">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURED PROJECT ── -->
+<section>
+  <div class="container">
+    <div data-reveal>
+      <span class="section-label">Current Project</span>
+      <h2 class="section-title">Mixed-Use Building — <span>Ijesha Road, Surulere</span></h2>
+      <p class="section-subtitle">A prime commercial and residential development in the heart of Lagos Mainland, offering warehouses, offices and mini-flats on a 15–18 year lease.</p>
+    </div>
+    <div class="grid-2" data-reveal style="align-items:start;">
+      <div>
+        <div class="highlight-box">
+          <strong>Location:</strong> Ijesha Road, Surulere, Lagos State — connecting Lagos Island/VI to the Mainland with direct access to Apapa–Oshodi Expressway.
+        </div>
+        <ul style="list-style:none;margin:1.5rem 0;display:flex;flex-direction:column;gap:0.75rem;">
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <svg width="20" height="20" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="#2E7D32" style="flex-shrink:0;margin-top:2px;"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span><strong>Good road network</strong> — connects Mushin, Lawanson, Itire, Aguda, Cele</span>
+          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <svg width="20" height="20" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="#2E7D32" style="flex-shrink:0;margin-top:2px;"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span><strong>Constant power &amp; water</strong> — borehole, drainage and prepaid meters</span>
+          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <svg width="20" height="20" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="#2E7D32" style="flex-shrink:0;margin-top:2px;"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span><strong>Secured environment</strong> — perimeter fencing, interlocking compound</span>
+          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <svg width="20" height="20" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="#2E7D32" style="flex-shrink:0;margin-top:2px;"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span><strong>Over 200% guaranteed return</strong> before lease tenure ends</span>
+          </li>
+        </ul>
+        <a href="investment.html" class="btn btn-primary">See Investment Plans</a>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+        <div style="background:var(--green-pale);border-radius:12px;padding:1.5rem;text-align:center;">
+          <div style="font-size:2rem;font-weight:800;color:var(--green-main);">16</div>
+          <div style="font-size:0.8rem;color:#555;margin-top:0.25rem;">Total Units</div>
+        </div>
+        <div style="background:#FFF8E1;border-radius:12px;padding:1.5rem;text-align:center;">
+          <div style="font-size:2rem;font-weight:800;color:#F9A825;">18%</div>
+          <div style="font-size:0.8rem;color:#555;margin-top:0.25rem;">Annual ROI</div>
+        </div>
+        <div style="background:var(--green-pale);border-radius:12px;padding:1.5rem;text-align:center;">
+          <div style="font-size:2rem;font-weight:800;color:var(--green-main);">4</div>
+          <div style="font-size:0.8rem;color:#555;margin-top:0.25rem;">Floors</div>
+        </div>
+        <div style="background:#FFF8E1;border-radius:12px;padding:1.5rem;text-align:center;">
+          <div style="font-size:2rem;font-weight:800;color:#F9A825;">15–18</div>
+          <div style="font-size:0.8rem;color:#555;margin-top:0.25rem;">Year Lease</div>
+        </div>
+        <div style="background:var(--green-main);border-radius:12px;padding:1.5rem;text-align:center;grid-column:span 2;">
+          <div style="font-size:1.6rem;font-weight:800;color:white;">₦368M</div>
+          <div style="font-size:0.8rem;color:#c8e6c9;margin-top:0.25rem;">Total Construction Budget</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BAND ── -->
+<div class="cta-band">
+  <h2>Ready to Secure Your Real Estate Future?</h2>
+  <p>Investment windows are limited. Join other smart investors already locking in 18% annual returns in a prime Lagos location.</p>
+  <div class="btn-actions">
+    <a href="investment.html" class="btn btn-gold">View Investment Plans</a>
+    <a href="contact.html" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,0.5);">Contact Our Team</a>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>Havilah Image Developments Ltd</h4>
+      <p>An architect-led project management practice delivering residential, commercial and institutional projects across Nigeria with 15+ years of proven expertise.</p>
+      <p style="margin-top:1rem;">RC 1492175 · Incorporated May 2018</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="projects.html">Past Projects</a></li>
+        <li><a href="investment.html">Investment Plans</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>7, Ijaoye Street (1st floor)<br>Near WAEC, Jibowu, Yaba<br>Lagos State, Nigeria</p>
+      <p style="margin-top:0.75rem;"><a href="tel:09133329547">09133329547</a></p>
+      <p><a href="mailto:hidlimited2015@gmail.com">hidlimited2015@gmail.com</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Havilah Image Developments Ltd. All rights reserved.</span>
+    <span>RC 1492175 · Federal Republic of Nigeria</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

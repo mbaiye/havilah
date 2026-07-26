@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Havilah Image Developments Ltd</title>
+  <meta name="description" content="Learn about Havilah Image Developments Ltd — our story, board of directors, and expert operation team." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    [data-reveal] {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    [data-reveal].revealed { opacity: 1; transform: none; }
+
+    .team-card {
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+      padding: 2rem;
+      border-top: 5px solid var(--green-main);
+      transition: transform 0.2s;
+    }
+    .team-card:hover { transform: translateY(-4px); }
+
+    .team-avatar {
+      width: 70px; height: 70px;
+      border-radius: 50%;
+      background: var(--green-pale);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1rem;
+      font-size: 1.6rem; font-weight: 800;
+      color: var(--green-main);
+    }
+
+    .team-card h3 { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.2rem; }
+    .team-card .role { font-size: 0.8rem; color: var(--green-main); font-weight: 600; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .team-card p { font-size: 0.86rem; color: var(--gray-text); line-height: 1.65; }
+
+    .ops-row {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+      margin-bottom: 0.75rem;
+    }
+    .ops-icon { width: 42px; height: 42px; border-radius: 50%; background: var(--green-pale); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ops-icon svg { width: 20px; height: 20px; stroke: var(--green-main); }
+    .ops-row h4 { font-size: 0.92rem; font-weight: 700; color: var(--dark); }
+    .ops-row span { font-size: 0.8rem; color: var(--gray-text); }
+
+    .value-card {
+      background: var(--green-main);
+      color: white;
+      border-radius: 12px;
+      padding: 1.75rem;
+      text-align: center;
+    }
+    .value-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .value-card p { font-size: 0.85rem; color: #c8e6c9; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand">
+    <div style="width:40px;height:40px;background:white;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+      <svg viewBox="0 0 40 40" width="32" height="32"><circle cx="20" cy="20" r="18" fill="#2E7D32"/><text x="20" y="26" text-anchor="middle" fill="white" font-size="16" font-weight="800" font-family="Arial">H</text></svg>
+    </div>
+    <span>HAVILAH<small>Image Developments Ltd</small></span>
+  </a>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="investment.html">Invest</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <h1>About Havilah Image Developments</h1>
+  <p>Architect-led. Results-driven. Trusted across Nigeria for 15+ years.</p>
+</div>
+
+<!-- ABOUT STORY -->
+<section>
+  <div class="container">
+    <div class="grid-2" style="align-items:center;gap:4rem;" data-reveal>
+      <div>
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title">A Vision Built on <span>Accountability & Excellence</span></h2>
+        <p style="color:var(--gray-text);margin-bottom:1rem;line-height:1.8;">Havilah Image Development Ltd is an architect-led project management practice with over 15 years of experience delivering residential, commercial, and institutional projects across Nigeria.</p>
+        <p style="color:var(--gray-text);margin-bottom:1rem;line-height:1.8;">We coordinate all stakeholders — from client teams to consultants and contractors — to drive clarity, accountability, and progress at every phase of a project.</p>
+        <p style="color:var(--gray-text);line-height:1.8;">Our services are driven by seasoned professionals committed to meeting a market need for viable, safe, and profitable investment opportunities through uncompromised values: accountability, proficiency, integrity, consistency, and innovation.</p>
+      </div>
+      <div class="grid-2" style="gap:1rem;">
+        <div class="value-card">
+          <h3>Accountability</h3>
+          <p>Full transparency on investor funds and project financials at every stage.</p>
+        </div>
+        <div class="value-card" style="background:var(--green-dark);">
+          <h3>Proficiency</h3>
+          <p>Expert execution across architecture, engineering, QS, and legal domains.</p>
+        </div>
+        <div class="value-card" style="background:var(--green-dark);">
+          <h3>Integrity</h3>
+          <p>Honest dealings with clients, investors, contractors and all stakeholders.</p>
+        </div>
+        <div class="value-card">
+          <h3>Innovation</h3>
+          <p>Fresh approaches to design, project delivery and investment structuring.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOARD OF DIRECTORS -->
+<section style="background:var(--gray-light);">
+  <div class="container">
+    <div data-reveal style="text-align:center;margin-bottom:3rem;">
+      <span class="section-label">Leadership</span>
+      <h2 class="section-title">Board of <span>Directors</span></h2>
+      <p class="section-subtitle" style="margin:0 auto;">Our leadership team combines decades of expertise across architecture, engineering, interior design, law and human resources.</p>
+    </div>
+    <div class="grid-2" data-reveal style="gap:2rem;">
+      <div class="team-card">
+        <div class="team-avatar">FA</div>
+        <h3>Arc. Folorunsho Adeoluwa Samuel, MNIA, MJF</h3>
+        <div class="role">Managing Director / Lead Architect & Project Manager</div>
+        <p>A visionary Architect and certified Project Manager with over 15 years of experience in delivering high-impact residential and commercial projects. Holds B.Sc &amp; M.Arch from Obafemi Awolowo University plus PGD in Project Management. Licensed by ARCON; Member of Nigeria Institute of Architects (NIA). Skilled in blending aesthetics with functionality while adhering to budgets and timelines.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">AA</div>
+        <h3>Mrs. Adeola Anthony-Obi</h3>
+        <div class="role">Director — Interior & Landscape Architecture</div>
+        <p>A dynamic Interior Architect with 18+ years of experience creating spaces that enhance wellness, sustainability, and user experience for residential, commercial, and hospitality clients. M.Arch (Interior Architecture) from OAU; certified by Decor &amp; Rainbow Academy and Decor Group Manchester, UK. Strengths in project management, client relations, space planning and décor.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">BO</div>
+        <h3>Engr. Biobaku Oluwale Josiah, MNSE, MACEN, COREL</h3>
+        <div class="role">Director — Civil & Structural Engineering</div>
+        <p>Graduate of Civil Engineering from Federal Polytechnic, Ilaro. Member of Nigerian Society of Engineers (MNSE M15390), Member ACEN, and Registered Engineer with COREN (R.12586). Former Senior Engineer at EAI Design Partnership, Lagos (1995–2003) responsible for design, supervision and management of major projects.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">OS</div>
+        <h3>Miss Orjiene Oluchi Sandra</h3>
+        <div class="role">Company Secretary / Head of Human Resources</div>
+        <p>Graduate of University of Lagos; certified by American Council of Training and Development in Human Resources Management. Specialisations in recruitment, labour and employment, compensation and benefits, and training and development. Holds certification from Nigeria Learning Passport. Expert in talent acquisition, HR policy, compensation design and Organisation Development.</p>
+      </div>
+    </div>
+
+    <!-- Lawyer -->
+    <div style="margin-top:2rem;" data-reveal>
+      <div class="team-card" style="max-width:600px;margin:0 auto;">
+        <div class="team-avatar">OE</div>
+        <h3>Olumide Gbemi Ehinmitan, Esq.</h3>
+        <div class="role">Company Lawyer</div>
+        <p>A committed and pragmatic individual with almost seven years of professional experience in contract negotiation and documentation. Graduate of Obafemi Awolowo University. Ensures all investment agreements, lease arrangements, and corporate transactions are legally sound.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPERATION TEAM -->
+<section>
+  <div class="container">
+    <div data-reveal style="margin-bottom:2.5rem;">
+      <span class="section-label">Our People</span>
+      <h2 class="section-title">Operation <span>Team</span></h2>
+      <p class="section-subtitle">A multidisciplinary team of licensed professionals covering every aspect of project delivery.</p>
+    </div>
+    <div class="grid-2" data-reveal>
+      <div>
+        <div class="ops-row">
+          <div class="ops-icon"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5z"/><rect x="3" y="10" width="18" height="11" rx="1" stroke-width="2" fill="none"/></svg></div>
+          <div><h4>Arc. Folorunsho Adeoluwa Samuel</h4><span>Architect / Project Manager — B.ARCH; M.ARCH; CPMP; ACPM</span></div>
+        </div>
+        <div class="ops-row">
+          <div class="ops-icon"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
+          <div><h4>Mrs. Adeola Obi</h4><span>Interior / Landscape Architect</span></div>
+        </div>
+        <div class="ops-row">
+          <div class="ops-icon"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <div><h4>Engr. Biobaku Oluwale Josiah</h4><span>Civil / Structural Engineer — HND; B.ENG; COREL</span></div>
+        </div>
+        <div class="ops-row">
+          <div class="ops-icon"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg></div>
+          <div><h4>Q.S. Oke Olubiyi R.</h4><span>Quantity Surveyor — Dip Q.S.; MNIQS; RQS</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="ops-row">
+          <div class="ops-icon"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1"/></svg></div>
+          <div><h4>Mr. Kunle Adenuga</h4><span>Finance / Account</span></div>
+        </div>
+        <div class="ops-row">
+          <div class="ops-icon"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg></div>
+          <div><h4>Miss Orjiene Oluchi Sandra</h4><span>Sales / Marketing</span></div>
+        </div>
+        <div class="ops-row">
+          <div class="ops-icon"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5"/></svg></div>
+          <div><h4>Builder Wale Olanrewaju S.</h4><span>Site Supervisor — HND Building</span></div>
+        </div>
+        <div class="ops-row">
+          <div class="ops-icon"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+          <div><h4>Mr. Adeogun Olabode</h4><span>Electrical Engineer</span></div>
+        </div>
+        <div class="ops-row">
+          <div class="ops-icon"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></div>
+          <div><h4>Seun Badejo</h4><span>Procurement</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <h2>Work with Nigeria's Best Project Managers</h2>
+  <p>From design to delivery, we handle it all. Let's discuss your next project.</p>
+  <div class="btn-actions">
+    <a href="contact.html" class="btn btn-gold">Get In Touch</a>
+    <a href="services.html" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,0.5);">Our Services</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>Havilah Image Developments Ltd</h4>
+      <p>An architect-led project management practice delivering residential, commercial and institutional projects across Nigeria with 15+ years of proven expertise.</p>
+      <p style="margin-top:1rem;">RC 1492175 · Incorporated May 2018</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="projects.html">Past Projects</a></li>
+        <li><a href="investment.html">Investment Plans</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>7, Ijaoye Street (1st floor)<br>Near WAEC, Jibowu, Yaba<br>Lagos State, Nigeria</p>
+      <p style="margin-top:0.75rem;"><a href="tel:09133329547">09133329547</a></p>
+      <p><a href="mailto:hidlimited2015@gmail.com">hidlimited2015@gmail.com</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Havilah Image Developments Ltd. All rights reserved.</span>
+    <span>RC 1492175 · Federal Republic of Nigeria</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

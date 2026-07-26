@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investment Plans — Havilah Image Developments Ltd</title>
+  <meta name="description" content="Invest in Havilah's Mixed-Use Building on Ijesha Road, Surulere. 18% annual ROI, 15–18 year lease, limited slots available." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    [data-reveal] { opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease; }
+    [data-reveal].revealed { opacity:1;transform:none; }
+
+    .invest-hero {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-main) 70%);
+      padding: 7rem 2rem 3.5rem;
+      color: white;
+      text-align: center;
+    }
+
+    .invest-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; margin-bottom: 0.75rem; }
+    .invest-hero p { font-size: 1.05rem; color: #c8e6c9; max-width: 580px; margin: 0 auto 2rem; }
+
+    .roi-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gold);
+      color: #1a1a1a;
+      font-size: 1.1rem;
+      font-weight: 800;
+      padding: 0.6rem 1.5rem;
+      border-radius: 50px;
+      margin-bottom: 2rem;
+    }
+
+    .plan-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      border: 2px solid transparent;
+      transition: border-color 0.2s, transform 0.2s;
+      position: relative;
+    }
+
+    .plan-card:hover {
+      border-color: var(--green-main);
+      transform: translateY(-5px);
+    }
+
+    .plan-card.featured {
+      border-color: var(--gold);
+      background: linear-gradient(160deg, #FFFDE7, white);
+    }
+
+    .plan-card .popular-tag {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: #1a1a1a;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+    }
+
+    .plan-card .amount {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--green-main);
+      line-height: 1;
+      margin: 1rem 0 0.25rem;
+    }
+
+    .plan-card .slots {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 1.25rem;
+    }
+
+    .plan-card .roi-rate {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #F9A825;
+      line-height: 1;
+    }
+
+    .plan-card .roi-label { font-size: 0.85rem; color: #888; margin-bottom: 1.5rem; }
+
+    .plan-card ul { list-style: none; text-align: left; margin-bottom: 1.75rem; }
+    .plan-card ul li {
+      display: flex; gap: 0.5rem;
+      font-size: 0.87rem; color: #555;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .plan-card ul li:last-child { border: none; }
+    .plan-card ul li::before { content: '✓'; color: var(--green-main); font-weight: 800; flex-shrink: 0; }
+
+    .plan-card .btn { width: 100%; text-align: center; }
+
+    .space-card {
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      overflow: hidden;
+    }
+
+    .space-card-header {
+      background: var(--green-main);
+      color: white;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .space-card-header h3 { font-size: 1rem; font-weight: 700; }
+    .space-card-header .dim { font-size: 0.8rem; color: #c8e6c9; margin-top: 0.15rem; }
+
+    .space-card-body { padding: 1.5rem; }
+
+    .price-row {
+      display: flex; justify-content: space-between;
+      font-size: 0.85rem; padding: 0.5rem 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .price-row:last-child { border: none; }
+    .price-row .lbl { color: #777; }
+    .price-row .val { font-weight: 700; color: var(--dark); }
+
+    .how-step {
+      display: flex; gap: 1.25rem; align-items: flex-start;
+      padding: 1.25rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 1px 10px rgba(0,0,0,0.06);
+    }
+
+    .how-num {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--green-main); color: white;
+      font-weight: 800; font-size: 1.1rem;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .how-step h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .how-step p { font-size: 0.84rem; color: var(--gray-text); line-height: 1.6; }
+
+    .bank-card {
+      background: var(--green-pale);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border-left: 4px solid var(--green-main);
+    }
+
+    .bank-card h4 { font-size: 0.9rem; font-weight: 700; color: var(--dark); margin-bottom: 0.75rem; }
+    .bank-row { display: flex; justify-content: space-between; font-size: 0.85rem; padding: 0.3rem 0; }
+    .bank-row .bank { color: #555; }
+    .bank-row .acct { font-weight: 700; font-family: monospace; color: var(--dark); }
+
+    .urgency-bar {
+      background: #FFF3E0;
+      border: 1px solid #FFCC02;
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .urgency-bar svg { width: 28px; height: 28px; stroke: #F57F17; flex-shrink: 0; }
+    .urgency-bar p { font-size: 0.9rem; color: #E65100; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand">
+    <div style="width:40px;height:40px;background:white;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+      <svg viewBox="0 0 40 40" width="32" height="32"><circle cx="20" cy="20" r="18" fill="#2E7D32"/><text x="20" y="26" text-anchor="middle" fill="white" font-size="16" font-weight="800" font-family="Arial">H</text></svg>
+    </div>
+    <span>HAVILAH<small>Image Developments Ltd</small></span>
+  </a>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="investment.html">Invest</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="invest-hero">
+  <div class="roi-badge">18% Annual ROI · Limited Slots Available</div>
+  <h1>Invest in Prime Lagos Real Estate</h1>
+  <p>Secure your spot in our Mixed-Use Building on Ijesha Road, Surulere — a guaranteed return of over 200% before lease tenure ends.</p>
+  <a href="#plans" class="btn btn-gold">See Investment Plans</a>
+</div>
+
+<!-- PROJECT OVERVIEW -->
+<section>
+  <div class="container">
+    <div class="urgency-bar" data-reveal>
+      <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+      <p>Investment window is open for 3 months only. Only 24 slots available across all plans. Act now to secure your position.</p>
+    </div>
+
+    <div class="grid-2" style="gap:3rem;align-items:start;" data-reveal>
+      <div>
+        <span class="section-label">The Project</span>
+        <h2 class="section-title">Mixed-Use Building — <span>Ijesha Road, Surulere</span></h2>
+        <p style="color:var(--gray-text);line-height:1.8;margin-bottom:1rem;">Located along Ijesha road in Surulere, Lagos State — a busy residential and commercial neighbourhood connecting Lagos Island/Victoria Island to the Mainland, with direct access to the Apapa–Oshodi Expressway.</p>
+        <p style="color:var(--gray-text);line-height:1.8;margin-bottom:1.5rem;">The building includes Warehouses, Offices and Mini Flats that can be lived in or rented out for a guaranteed return of over 200% before the lease tenure ends.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div class="highlight-box" style="margin:0;">
+            <strong>Total Area</strong><br>
+            <span style="font-size:1.3rem;font-weight:800;color:var(--green-main);">900 m²</span>
+          </div>
+          <div class="highlight-box" style="margin:0;">
+            <strong>Total Units</strong><br>
+            <span style="font-size:1.3rem;font-weight:800;color:var(--green-main);">16 Units</span>
+          </div>
+          <div class="highlight-box" style="margin:0;">
+            <strong>Floors</strong><br>
+            <span style="font-size:1.3rem;font-weight:800;color:var(--green-main);">4 Floors</span>
+          </div>
+          <div class="highlight-box" style="margin:0;">
+            <strong>Lease Tenure</strong><br>
+            <span style="font-size:1.3rem;font-weight:800;color:var(--green-main);">15–18 Yrs</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:1rem;font-weight:700;margin-bottom:1rem;">Key Features</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.7rem;margin-bottom:1.5rem;">
+          <li style="display:flex;gap:0.75rem;">
+            <svg width="20" height="20" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="#2E7D32" style="flex-shrink:0;margin-top:2px;"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Good road network connecting major Lagos arteries
+          </li>
+          <li style="display:flex;gap:0.75rem;">
+            <svg width="20" height="20" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="#2E7D32" style="flex-shrink:0;margin-top:2px;"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Constant power and water supply (borehole system)
+          </li>
+          <li style="display:flex;gap:0.75rem;">
+            <svg width="20" height="20" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="#2E7D32" style="flex-shrink:0;margin-top:2px;"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Secured perimeter fencing and interlocking compound
+          </li>
+          <li style="display:flex;gap:0.75rem;">
+            <svg width="20" height="20" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="#2E7D32" style="flex-shrink:0;margin-top:2px;"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Drainage system and prepaid meters
+          </li>
+          <li style="display:flex;gap:0.75rem;">
+            <svg width="20" height="20" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="#2E7D32" style="flex-shrink:0;margin-top:2px;"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Proper facility management and maintenance planning
+          </li>
+          <li style="display:flex;gap:0.75rem;">
+            <svg width="20" height="20" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="#2E7D32" style="flex-shrink:0;margin-top:2px;"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Individual toilets, tiles and electricity wiring per unit
+          </li>
+        </ul>
+
+        <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.75rem;">Project Partners</h3>
+        <div style="display:flex;flex-direction:column;gap:0.5rem;">
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;color:#555;">
+            <span style="width:8px;height:8px;background:var(--green-main);border-radius:50%;flex-shrink:0;"></span>
+            <strong>IDG Image Associates Ltd</strong> — Architects / Project Managers
+          </div>
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;color:#555;">
+            <span style="width:8px;height:8px;background:var(--green-main);border-radius:50%;flex-shrink:0;"></span>
+            <strong>Artwork Design</strong> — Structural Engineers
+          </div>
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;color:#555;">
+            <span style="width:8px;height:8px;background:var(--green-main);border-radius:50%;flex-shrink:0;"></span>
+            <strong>Highreach Project Ltd</strong> — Quantity Surveyors
+          </div>
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;color:#555;">
+            <span style="width:8px;height:8px;background:var(--green-main);border-radius:50%;flex-shrink:0;"></span>
+            <strong>Zest Spaces Ltd</strong> — Interior Designers / Landscape Architects
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPACE TYPES -->
+<section style="background:var(--gray-light);">
+  <div class="container">
+    <div data-reveal style="margin-bottom:2.5rem;">
+      <span class="section-label">Available Spaces</span>
+      <h2 class="section-title">Choose Your <span>Space Type</span></h2>
+      <p class="section-subtitle">Each unit is available for outright purchase or a 12-month payment plan with 40% down payment.</p>
+    </div>
+    <div class="grid-3" data-reveal>
+      <div class="space-card">
+        <div class="space-card-header">
+          <h3>Warehouse / Supermarket / Pharmacy</h3>
+          <div class="dim">3.9m × 6.6m · 32.58 m² · With individual toilet</div>
+        </div>
+        <div class="space-card-body">
+          <div class="price-row"><span class="lbl">Outright (15 yrs)</span><span class="val">₦36m – ₦48m</span></div>
+          <div class="price-row"><span class="lbl">12-Month Plan</span><span class="val">₦42m – ₦56m</span></div>
+          <div class="price-row"><span class="lbl">Annual Rent Value</span><span class="val">₦2.5m – ₦3.6m</span></div>
+          <div class="price-row"><span class="lbl">Ownership Years</span><span class="val">15 – 18 Years</span></div>
+          <div class="price-row"><span class="lbl">Units Available</span><span class="val">2 Units</span></div>
+        </div>
+      </div>
+      <div class="space-card">
+        <div class="space-card-header" style="background:var(--green-dark);">
+          <h3>Office Space (1-Bedroom Flat)</h3>
+          <div class="dim">4.8m × 5.7m · 40.5 m² · With individual toilet</div>
+        </div>
+        <div class="space-card-body">
+          <div class="price-row"><span class="lbl">Outright (15 yrs)</span><span class="val">₦30m – ₦45m</span></div>
+          <div class="price-row"><span class="lbl">12-Month Plan</span><span class="val">₦39m – ₦51m</span></div>
+          <div class="price-row"><span class="lbl">Annual Rent Value</span><span class="val">₦2.1m – ₦3m</span></div>
+          <div class="price-row"><span class="lbl">Ownership Years</span><span class="val">15 – 18 Years</span></div>
+          <div class="price-row"><span class="lbl">Units Available</span><span class="val">4 Units</span></div>
+        </div>
+      </div>
+      <div class="space-card">
+        <div class="space-card-header" style="background:#2E7D32;">
+          <h3>Mini Flat (1 Bedroom)</h3>
+          <div class="dim">3.9m × 8.025m · 40.5 m²</div>
+        </div>
+        <div class="space-card-body">
+          <div class="price-row"><span class="lbl">Outright (15 yrs)</span><span class="val">₦21m – ₦36m</span></div>
+          <div class="price-row"><span class="lbl">12-Month Plan</span><span class="val">₦30m – ₦42m</span></div>
+          <div class="price-row"><span class="lbl">Annual Rent Value</span><span class="val">₦1.5m – ₦2.1m</span></div>
+          <div class="price-row"><span class="lbl">Ownership Years</span><span class="val">15 – 18 Years</span></div>
+          <div class="price-row"><span class="lbl">Units Available</span><span class="val">8 Units</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTMENT PLANS -->
+<section id="plans">
+  <div class="container">
+    <div data-reveal style="text-align:center;margin-bottom:3rem;">
+      <span class="section-label">Investment Plans</span>
+      <h2 class="section-title">Pick Your <span>Investment Tier</span></h2>
+      <p class="section-subtitle" style="margin:0 auto;">All plans earn 18% per annum. Investment window open for 3 months only. Slots are limited.</p>
+    </div>
+    <div class="grid-3" data-reveal>
+      <div class="plan-card">
+        <div style="font-size:0.85rem;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:0.08em;">Starter</div>
+        <div class="amount">₦10M</div>
+        <div class="slots">15 Slots Available</div>
+        <div class="roi-rate">18%</div>
+        <div class="roi-label">Per Annum ROI</div>
+        <ul>
+          <li>₦1,800,000 annual return</li>
+          <li>Legal investment agreement</li>
+          <li>Transparent fund tracking</li>
+          <li>3-month subscription window</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Invest ₦10M</a>
+      </div>
+      <div class="plan-card featured">
+        <div class="popular-tag">Most Popular</div>
+        <div style="font-size:0.85rem;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:0.08em;">Growth</div>
+        <div class="amount">₦15M</div>
+        <div class="slots">6 Slots Available</div>
+        <div class="roi-rate">18%</div>
+        <div class="roi-label">Per Annum ROI</div>
+        <ul>
+          <li>₦2,700,000 annual return</li>
+          <li>Legal investment agreement</li>
+          <li>Transparent fund tracking</li>
+          <li>Priority investor status</li>
+        </ul>
+        <a href="contact.html" class="btn btn-gold">Invest ₦15M</a>
+      </div>
+      <div class="plan-card">
+        <div style="font-size:0.85rem;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:0.08em;">Premium</div>
+        <div class="amount">₦20M</div>
+        <div class="slots">3 Slots Available</div>
+        <div class="roi-rate">18%</div>
+        <div class="roi-label">Per Annum ROI</div>
+        <ul>
+          <li>₦3,600,000 annual return</li>
+          <li>Legal investment agreement</li>
+          <li>Transparent fund tracking</li>
+          <li>VIP investor privileges</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Invest ₦20M</a>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:0.82rem;color:#888;margin-top:1.5rem;">All figures are in Nigerian Naira (₦). ROI is 18% per annum. Investment backed by legal agreement and bank guarantees.</p>
+  </div>
+</section>
+
+<!-- HOW TO PARTICIPATE -->
+<section style="background:var(--gray-light);">
+  <div class="container">
+    <div data-reveal style="margin-bottom:2.5rem;">
+      <span class="section-label">How to Participate</span>
+      <h2 class="section-title">Getting Started is <span>Simple</span></h2>
+    </div>
+    <div class="grid-2" data-reveal style="gap:2rem;">
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div class="how-step">
+          <div class="how-num">1</div>
+          <div>
+            <h4>Contact Our Team</h4>
+            <p>Reach us via phone (09133329547) or email (hidlimited2015@gmail.com) to express interest and get a subscription form.</p>
+          </div>
+        </div>
+        <div class="how-step">
+          <div class="how-num">2</div>
+          <div>
+            <h4>Complete Subscription Form</h4>
+            <p>Print, fill and return the investor's subscription form which includes bank account details, terms and conditions.</p>
+          </div>
+        </div>
+        <div class="how-step">
+          <div class="how-num">3</div>
+          <div>
+            <h4>Make Your Payment</h4>
+            <p>Pay into one of our designated bank accounts below. Keep your payment evidence safe.</p>
+          </div>
+        </div>
+        <div class="how-step">
+          <div class="how-num" style="background:var(--gold);color:#1a1a1a;">4</div>
+          <div>
+            <h4>Submit Evidence</h4>
+            <p>Send your payment evidence and completed subscription form to hidlimited2015@gmail.com. Your slot is confirmed.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:1rem;font-weight:700;margin-bottom:1rem;">Payment Account Details</h3>
+        <div class="bank-card">
+          <h4>Account Name: Havilah Image Development Ltd</h4>
+          <div class="bank-row">
+            <span class="bank">FCMB</span>
+            <span class="acct">6070789013</span>
+          </div>
+          <div class="bank-row">
+            <span class="bank">GTBank</span>
+            <span class="acct">0427250739</span>
+          </div>
+        </div>
+        <div style="margin-top:1.5rem;background:var(--green-pale);border-radius:12px;padding:1.5rem;">
+          <h4 style="font-weight:700;margin-bottom:0.5rem;font-size:0.95rem;">Send Documents To:</h4>
+          <p style="font-size:0.9rem;color:#444;margin-bottom:0.25rem;">
+            <strong>Email:</strong> <a href="mailto:hidlimited2015@gmail.com" style="color:var(--green-main);">hidlimited2015@gmail.com</a>
+          </p>
+          <p style="font-size:0.9rem;color:#444;">
+            <strong>Phone:</strong> <a href="tel:09133329547" style="color:var(--green-main);">09133329547</a>
+          </p>
+        </div>
+        <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;margin-top:1.5rem;display:block;">Send Us an Enquiry</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <h2>Invest Now and Secure Your Real Estate Future</h2>
+  <p>Prime Lagos location. 18% annual ROI. Limited slots. Don't miss this window.</p>
+  <div class="btn-actions">
+    <a href="contact.html" class="btn btn-gold">Get In Touch</a>
+    <a href="tel:09133329547" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,0.5);">Call 09133329547</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>Havilah Image Developments Ltd</h4>
+      <p>An architect-led project management practice delivering residential, commercial and institutional projects across Nigeria with 15+ years of proven expertise.</p>
+      <p style="margin-top:1rem;">RC 1492175 · Incorporated May 2018</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="projects.html">Past Projects</a></li>
+        <li><a href="investment.html">Investment Plans</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>7, Ijaoye Street (1st floor)<br>Near WAEC, Jibowu, Yaba<br>Lagos State, Nigeria</p>
+      <p style="margin-top:0.75rem;"><a href="tel:09133329547">09133329547</a></p>
+      <p><a href="mailto:hidlimited2015@gmail.com">hidlimited2015@gmail.com</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Havilah Image Developments Ltd. All rights reserved.</span>
+    <span>RC 1492175 · Federal Republic of Nigeria</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

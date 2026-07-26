@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Havilah Image Developments Ltd</title>
+  <meta name="description" content="Full-lifecycle project management services from Havilah Image Developments Ltd — architecture, construction supervision, procurement, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    [data-reveal] { opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease; }
+    [data-reveal].revealed { opacity:1;transform:none; }
+
+    .lifecycle-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+    }
+
+    .lifecycle-steps::before {
+      content: '';
+      position: absolute;
+      left: 27px;
+      top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--green-main), var(--green-light));
+    }
+
+    .lifecycle-step {
+      display: flex;
+      gap: 1.5rem;
+      padding: 1.5rem 0;
+      position: relative;
+    }
+
+    .step-num {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--green-main);
+      color: white;
+      font-weight: 800;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      z-index: 1;
+      box-shadow: 0 4px 12px rgba(46,125,50,0.3);
+    }
+
+    .step-content h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--dark); }
+    .step-content p { font-size: 0.87rem; color: var(--gray-text); line-height: 1.65; }
+
+    .service-detail {
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+      padding: 2.25rem;
+      border-left: 5px solid var(--green-main);
+    }
+
+    .service-detail h3 {
+      font-size: 1.1rem; font-weight: 700;
+      color: var(--dark); margin-bottom: 1rem;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+
+    .service-detail ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .service-detail ul li {
+      display: flex;
+      gap: 0.6rem;
+      font-size: 0.87rem;
+      color: var(--gray-text);
+    }
+
+    .service-detail ul li::before {
+      content: '✓';
+      color: var(--green-main);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand">
+    <div style="width:40px;height:40px;background:white;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+      <svg viewBox="0 0 40 40" width="32" height="32"><circle cx="20" cy="20" r="18" fill="#2E7D32"/><text x="20" y="26" text-anchor="middle" fill="white" font-size="16" font-weight="800" font-family="Arial">H</text></svg>
+    </div>
+    <span>HAVILAH<small>Image Developments Ltd</small></span>
+  </a>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="investment.html">Invest</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <h1>Our Services</h1>
+  <p>End-to-end project management, architecture, and real estate investment services.</p>
+</div>
+
+<!-- SCOPE OVERVIEW -->
+<section>
+  <div class="container">
+    <div data-reveal style="margin-bottom:3rem;">
+      <span class="section-label">Scope of Services</span>
+      <h2 class="section-title">Everything You Need, <span>Under One Roof</span></h2>
+      <p class="section-subtitle">From project initiation through to handover — Havilah manages every phase with precision, accountability and innovation.</p>
+    </div>
+    <div class="grid-2" data-reveal style="gap:2rem;">
+      <div class="service-detail">
+        <h3>
+          <div class="icon-circle" style="margin:0;flex-shrink:0;width:42px;height:42px;">
+            <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          </div>
+          Project Management
+        </h3>
+        <ul>
+          <li>PM Plan, RACI matrix and communication plan</li>
+          <li>Reporting cadence and stakeholder coordination</li>
+          <li>Master schedule and milestone tracking</li>
+          <li>Cost baseline, cash-flow and earned-value tracking</li>
+          <li>Risk management and proactive issue resolution</li>
+        </ul>
+      </div>
+      <div class="service-detail">
+        <h3>
+          <div class="icon-circle" style="margin:0;flex-shrink:0;width:42px;height:42px;">
+            <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+          </div>
+          Architecture & Design
+        </h3>
+        <ul>
+          <li>Concept design and schematic planning</li>
+          <li>Design coordination across all disciplines</li>
+          <li>Permits and regulatory approvals (LASBCA, LSC, etc.)</li>
+          <li>Interior architecture and space planning</li>
+          <li>Landscape architecture and external works</li>
+        </ul>
+      </div>
+      <div class="service-detail">
+        <h3>
+          <div class="icon-circle" style="margin:0;flex-shrink:0;width:42px;height:42px;">
+            <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1"/></svg>
+          </div>
+          Procurement & Tender
+        </h3>
+        <ul>
+          <li>Tender strategy development</li>
+          <li>Bid documentation and analysis</li>
+          <li>Clarifications and negotiations with contractors</li>
+          <li>Award and contract management</li>
+          <li>Quantity surveying and cost control</li>
+        </ul>
+      </div>
+      <div class="service-detail">
+        <h3>
+          <div class="icon-circle" style="margin:0;flex-shrink:0;width:42px;height:42px;">
+            <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5"/></svg>
+          </div>
+          Construction Management
+        </h3>
+        <ul>
+          <li>Site mobilization and HSE plan</li>
+          <li>QA/QC regime and quality standards</li>
+          <li>Construction supervision and coordination</li>
+          <li>Progress meetings and minutes</li>
+          <li>Testing, commissioning and snag management</li>
+        </ul>
+      </div>
+      <div class="service-detail">
+        <h3>
+          <div class="icon-circle" style="margin:0;flex-shrink:0;width:42px;height:42px;">
+            <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </div>
+          Real Estate Investment
+        </h3>
+        <ul>
+          <li>Structured investment opportunity design</li>
+          <li>Legal agreements and subscription forms</li>
+          <li>18% annual ROI with transparent reporting</li>
+          <li>Long-lease commercial and residential units</li>
+          <li>Investor fund accountability and management</li>
+        </ul>
+      </div>
+      <div class="service-detail">
+        <h3>
+          <div class="icon-circle" style="margin:0;flex-shrink:0;width:42px;height:42px;">
+            <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+          </div>
+          Close-out & Handover
+        </h3>
+        <ul>
+          <li>Final inspection and defects management</li>
+          <li>As-built documentation</li>
+          <li>Commissioning and testing sign-off</li>
+          <li>Keys, warranties and maintenance manuals</li>
+          <li>Post-handover support and facility management planning</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIFECYCLE -->
+<section style="background:var(--gray-light);">
+  <div class="container">
+    <div class="grid-2" style="gap:4rem;align-items:center;" data-reveal>
+      <div>
+        <span class="section-label">Our Methodology</span>
+        <h2 class="section-title">A Structured <span>Project Lifecycle</span></h2>
+        <p style="color:var(--gray-text);margin-bottom:2rem;line-height:1.8;">Havilah Image Development Ltd adopts a structured project management lifecycle that ensures projects are delivered on time, within budget, and to the highest quality standards. This cyclical approach allows for continuous monitoring, proactive risk management, and seamless coordination among all stakeholders.</p>
+        <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+      </div>
+      <div class="lifecycle-steps">
+        <div class="lifecycle-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h3>Initiation & Mobilization</h3>
+            <p>Project brief, stakeholder alignment, team mobilization, site assessment and preliminary planning to get every project off to the right start.</p>
+          </div>
+        </div>
+        <div class="lifecycle-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h3>Design Management & Permitting</h3>
+            <p>Architectural concept, design coordination across all disciplines, regulatory submissions and approval management (LASBCA, PTPPL, LSC).</p>
+          </div>
+        </div>
+        <div class="lifecycle-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h3>Procurement & Award</h3>
+            <p>Tender documentation, bid analysis, contractor clarifications, negotiation and formal contract award to best-value suppliers.</p>
+          </div>
+        </div>
+        <div class="lifecycle-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h3>Construction Management</h3>
+            <p>Site mobilization, HSE plan, QA/QC regime, daily supervision, progress reporting and stakeholder coordination throughout the build.</p>
+          </div>
+        </div>
+        <div class="lifecycle-step">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <h3>Testing & Commissioning</h3>
+            <p>Systematic testing of all systems and services, snag list management and defects resolution prior to handover.</p>
+          </div>
+        </div>
+        <div class="lifecycle-step">
+          <div class="step-num" style="background:var(--gold);color:#1a1a1a;">6</div>
+          <div class="step-content">
+            <h3>Close-out & Handover</h3>
+            <p>Final inspections, as-built documentation, warranties, maintenance manuals and formal handover to the client.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <h2>Let's Bring Your Project to Life</h2>
+  <p>From a single apartment to a full mixed-use development — we have the expertise and team to deliver it.</p>
+  <div class="btn-actions">
+    <a href="contact.html" class="btn btn-gold">Get In Touch</a>
+    <a href="investment.html" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,0.5);">Investment Plans</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>Havilah Image Developments Ltd</h4>
+      <p>An architect-led project management practice delivering residential, commercial and institutional projects across Nigeria with 15+ years of proven expertise.</p>
+      <p style="margin-top:1rem;">RC 1492175 · Incorporated May 2018</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="projects.html">Past Projects</a></li>
+        <li><a href="investment.html">Investment Plans</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>7, Ijaoye Street (1st floor)<br>Near WAEC, Jibowu, Yaba<br>Lagos State, Nigeria</p>
+      <p style="margin-top:0.75rem;"><a href="tel:09133329547">09133329547</a></p>
+      <p><a href="mailto:hidlimited2015@gmail.com">hidlimited2015@gmail.com</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Havilah Image Developments Ltd. All rights reserved.</span>
+    <span>RC 1492175 · Federal Republic of Nigeria</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
