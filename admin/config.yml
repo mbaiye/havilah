@@ -1,0 +1,136 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Media / image uploads
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+# Editorial workflow — drafts before publishing
+publish_mode: editorial_workflow
+
+collections:
+
+  # ── SITE SETTINGS ──────────────────────────────────────────
+  - name: "settings"
+    label: "Site Settings"
+    files:
+
+      - name: "company"
+        label: "Company Info"
+        file: "_data/company.json"
+        fields:
+          - { label: "Company Name", name: "name", widget: "string", default: "Havilah Image Developments Ltd" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Phone Number", name: "phone", widget: "string" }
+          - { label: "Email Address", name: "email", widget: "string" }
+          - { label: "Office Address", name: "address", widget: "text" }
+          - { label: "RC Number", name: "rc", widget: "string", default: "RC 1492175" }
+          - { label: "FCMB Account Number", name: "fcmb", widget: "string" }
+          - { label: "GTBank Account Number", name: "gtb", widget: "string" }
+
+  # ── PROJECTS ───────────────────────────────────────────────
+  - name: "projects"
+    label: "Projects"
+    label_singular: "Project"
+    folder: "_projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Project Name", name: "title", widget: "string" }
+      - label: "Status"
+        name: "status"
+        widget: "select"
+        options:
+          - { label: "Completed", value: "completed" }
+          - { label: "Ongoing", value: "ongoing" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        multiple: true
+        options:
+          - { label: "Residential", value: "residential" }
+          - { label: "Commercial", value: "commercial" }
+          - { label: "Institutional", value: "institutional" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Year / Period", name: "year", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Cover Image", name: "image", widget: "image", required: false }
+
+  # ── INVESTMENT PLANS ───────────────────────────────────────
+  - name: "investment"
+    label: "Investment"
+    files:
+
+      - name: "plans"
+        label: "Investment Plans"
+        file: "_data/investment.json"
+        fields:
+          - label: "Investment Tiers"
+            name: "tiers"
+            widget: "list"
+            fields:
+              - { label: "Label (e.g. Starter)", name: "label", widget: "string" }
+              - { label: "Amount (e.g. ₦10,000,000)", name: "amount", widget: "string" }
+              - { label: "Slots Available", name: "slots", widget: "number" }
+              - { label: "ROI % Per Annum", name: "roi", widget: "number", default: 18 }
+              - { label: "Featured (highlight this tier)", name: "featured", widget: "boolean", default: false }
+
+          - label: "Space Types"
+            name: "spaces"
+            widget: "list"
+            fields:
+              - { label: "Space Name", name: "name", widget: "string" }
+              - { label: "Dimensions", name: "dimensions", widget: "string" }
+              - { label: "Area (m²)", name: "area", widget: "string" }
+              - { label: "Units Available", name: "units", widget: "number" }
+              - { label: "Outright Price Range", name: "outright", widget: "string" }
+              - { label: "12-Month Plan Price Range", name: "monthly_plan", widget: "string" }
+              - { label: "Annual Rent Value", name: "rent", widget: "string" }
+              - { label: "Ownership Years", name: "years", widget: "string" }
+
+          - { label: "Investment Window (months)", name: "window_months", widget: "number", default: 3 }
+          - { label: "Annual ROI %", name: "roi_percent", widget: "number", default: 18 }
+          - { label: "Projected Total Return", name: "total_return", widget: "string", default: "Over 200%" }
+
+  # ── TEAM MEMBERS ───────────────────────────────────────────
+  - name: "team"
+    label: "Team Members"
+    label_singular: "Team Member"
+    folder: "_team"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Full Name", name: "name", widget: "string" }
+      - { label: "Title / Role", name: "role", widget: "string" }
+      - label: "Department"
+        name: "department"
+        widget: "select"
+        options:
+          - { label: "Board of Directors", value: "board" }
+          - { label: "Operation Team", value: "operations" }
+      - { label: "Qualifications", name: "qualifications", widget: "string", required: false }
+      - { label: "Bio", name: "bio", widget: "text" }
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+      - { label: "Sort Order", name: "order", widget: "number", default: 99 }
+
+  # ── PAGES (editable text blocks) ───────────────────────────
+  - name: "pages"
+    label: "Page Content"
+    files:
+
+      - name: "home"
+        label: "Home Page"
+        file: "_data/home.json"
+        fields:
+          - { label: "Hero Headline", name: "hero_headline", widget: "string" }
+          - { label: "Hero Subtext", name: "hero_subtext", widget: "text" }
+          - { label: "About Intro (short)", name: "about_intro", widget: "text" }
+
+      - name: "about"
+        label: "About Page"
+        file: "_data/about.json"
+        fields:
+          - { label: "Company Story (Paragraph 1)", name: "story_p1", widget: "text" }
+          - { label: "Company Story (Paragraph 2)", name: "story_p2", widget: "text" }
+          - { label: "Company Story (Paragraph 3)", name: "story_p3", widget: "text" }

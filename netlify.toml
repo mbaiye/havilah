@@ -9,10 +9,21 @@
 [forms]
   # Netlify Forms processes submissions from data-netlify="true" forms automatically
 
+# Enable Netlify Identity + Git Gateway for CMS authentication
+[template.environment]
+  NETLIFY_GRAPH_OAUTH_CLIENT_ID = ""
+
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "DENY"
+    X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Allow the CMS admin panel to load external scripts
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:;"

@@ -1,0 +1,42 @@
+{
+  "roi_percent": 18,
+  "window_months": 3,
+  "total_return": "Over 200%",
+  "tiers": [
+    { "label": "Starter", "amount": "₦10,000,000", "slots": 15, "roi": 18, "featured": false },
+    { "label": "Growth", "amount": "₦15,000,000", "slots": 6, "roi": 18, "featured": true },
+    { "label": "Premium", "amount": "₦20,000,000", "slots": 3, "roi": 18, "featured": false }
+  ],
+  "spaces": [
+    {
+      "name": "Warehouse / Supermarket / Pharmacy",
+      "dimensions": "3.9m × 6.6m",
+      "area": "32.58",
+      "units": 2,
+      "outright": "₦36m – ₦48m",
+      "monthly_plan": "₦42m – ₦56m",
+      "rent": "₦2.5m – ₦3.6m",
+      "years": "15 – 18 Years"
+    },
+    {
+      "name": "Office Space (1-Bedroom Flat)",
+      "dimensions": "4.8m × 5.7m",
+      "area": "40.5",
+      "units": 4,
+      "outright": "₦30m – ₦45m",
+      "monthly_plan": "₦39m – ₦51m",
+      "rent": "₦2.1m – ₦3m",
+      "years": "15 – 18 Years"
+    },
+    {
+      "name": "Mini Flat (1 Bedroom)",
+      "dimensions": "3.9m × 8.025m",
+      "area": "40.5",
+      "units": 8,
+      "outright": "₦21m – ₦36m",
+      "monthly_plan": "₦30m – ₦42m",
+      "rent": "₦1.5m – ₦2.1m",
+      "years": "15 – 18 Years"
+    }
+  ]
+}

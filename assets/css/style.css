@@ -443,6 +443,34 @@ section {
   box-shadow: 0 0 0 3px rgba(46,125,50,0.1);
 }
 
+/* ── CTA BAND ── */
+.cta-band {
+  background: linear-gradient(135deg, var(--green-dark), var(--green-main));
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.cta-band h2 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.cta-band p {
+  color: #c8e6c9;
+  max-width: 540px;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+}
+
+.cta-band .btn-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 /* ── MOBILE ── */
 @media (max-width: 768px) {
   .hamburger { display: flex; }
